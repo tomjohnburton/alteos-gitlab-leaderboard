@@ -26,7 +26,7 @@ export default class UserBox extends Component {
     if (this.state.users === null) {
       return <div>Loading</div>;
     }
-    return this.state.users.map(user => <UserCard user={user} />);
+    return this.state.users.map((user, i) => <UserCard key={i} user={user} />);
   };
 
   render() {

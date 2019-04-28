@@ -21,8 +21,8 @@ export default class MergeBox extends PureComponent {
     if (this.state.mergeRequests === null) {
       return <div>Loading</div>;
     }
-    return this.state.mergeRequests.map(mergeRequest => {
-      return <MergeCard mergeRequests={mergeRequest} />;
+    return this.state.mergeRequests.map((mergeRequest, i) => {
+      return <MergeCard key={i} mergeRequests={mergeRequest} />;
     });
   };
 

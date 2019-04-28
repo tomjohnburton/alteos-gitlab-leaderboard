@@ -1,8 +1,9 @@
 import Axios from "axios";
+require("dotenv").config();
 
 const api = Axios.create({
   baseURL: "https://gitlab.com/api/v4",
-  headers: { "PRIVATE-TOKEN": "V1BKL1ySxGvcsBMezSE8" }
+  headers: { "PRIVATE-TOKEN": process.env.REACT_APP_GITLAB_TOKEN }
 });
 
 export default {
