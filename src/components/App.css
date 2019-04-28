@@ -1,33 +1,125 @@
+@font-face {
+  font-family: CamptonMedium;
+  src: url("/campton.ttf");
+}
 .App {
-  text-align: center;
+  font-family: CamptonMedium;
+  display: flex;
+  flex-direction: row;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .user-title-container,
+.App .merge-request-container {
   display: flex;
   flex-direction: column;
+  width: 40vw;
+  height: 100vh;
+}
+.App .user-title-container .title,
+.App .merge-request-container .title {
+  height: 20%;
+}
+.App .user-title-container .title img,
+.App .merge-request-container .title img {
+  width: 40%;
+}
+.App .user-title-container .user,
+.App .merge-request-container .user {
+  height: 80%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.App .user-title-container .user .user-box,
+.App .merge-request-container .user .user-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  height: 85%;
+  background: #faa742;
+  border-radius: 23px;
+  overflow: auto;
+}
+.App .user-title-container .user .user-box .user-card,
+.App .merge-request-container .user .user-box .user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e07b00;
+  border-radius: 8px;
+  width: 90%;
+  height: 5rem;
+  margin: 0.3rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+.App .user-title-container .user .user-box .user-card .container,
+.App .merge-request-container .user .user-box .user-card .container {
+  display: flex;
+  align-items: center;
+}
+.App .user-title-container .user .user-box .user-card .user-card-approvals,
+.App .merge-request-container .user .user-box .user-card .user-card-approvals {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+}
+.App .user-title-container .user .user-box .user-card .user-card-approvals img,
+.App .merge-request-container .user .user-box .user-card .user-card-approvals img {
+  width: 30%;
+}
+.App .user-title-container .user .user-box .user-card div,
+.App .merge-request-container .user .user-box .user-card div {
+  margin: 5px;
+}
+.App .merge-request-container {
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App .merge-request-container .merge-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+  background: #faa742;
+  border-radius: 23px;
+  overflow: auto;
+}
+.App .merge-request-container .merge-box .merge-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e07b00;
+  border-radius: 8px;
+  width: 90%;
+  height: 5rem;
+  margin: 0.3rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.avatar {
+  box-sizing: border-box;
+}
+.avatar img {
+  width: 4rem;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
 }
+
+/*# sourceMappingURL=App.css.map */
